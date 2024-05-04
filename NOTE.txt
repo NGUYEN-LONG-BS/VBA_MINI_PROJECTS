@@ -1,0 +1,5 @@
+Tạo UserForm nhập liệu bằng VB trên excel | Phần 1 - Tạo sheet dữ liệu, thiết kế form viết code VB
+https://www.youtube.com/watch?v=cmMuv4zEKlY
+
+Tạo UserForm nhập liệu bằng VBA trên excel PHẦN 2 | Tìm kiếm - Cập nhật - Xóa thông tin
+https://www.youtube.com/watch?v=IkLtbn_hrYo
