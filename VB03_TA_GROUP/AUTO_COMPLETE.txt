@@ -1,0 +1,78 @@
+'====================================================================================================================================================
+'====================================...ComboBox Ma Khach Hang AutoComplete
+'====================================https://stackoverflow.com/questions/72793282/vba-combo-box-in-excel-for-search-engine-invalid-property-array-index-error-381
+'====================================================================================================================================================
+Private Sub ComboBox_MA_KH_Change()
+    Dim I, LRow As Long
+'    LRow = SH_RANGE_MA_KH.Cells(Rows.count, 2).End(xlUp).row
+    LRow = F_FIND_ANY_RANGE_IN_ANY_SHEET_01("RANGE_COMBOBOX_MA_KHACH_HANG", "SH_RANGE_MA_KH_01").Rows.count + 2
+    If LRow > 1 Then
+        If Not Comb_Arrow Then
+            With Me.ComboBox_MA_KH
+'                .List = SH_RANGE_MA_KH.range("A2", SH_RANGE_MA_KH.Cells(Rows.count, "B").End(xlUp)).Value
+                .List = F_FIND_ANY_RANGE_IN_ANY_SHEET_01("RANGE_COMBOBOX_MA_KHACH_HANG", "SH_RANGE_MA_KH_01").Value
+                .RemoveItem 0
+                .ListRows = Application.WorksheetFunction.Min(15, .ListCount)
+                .DropDown
+                 If Len(.Text) Then
+                    For I = .ListCount - 1 To 0 Step -1
+                        If InStr(1, .List(I), .Text, vbTextCompare) = 0 Then .RemoveItem I
+                    Next
+                 .DropDown
+                End If
+             End With
+        End If
+    End If
+End Sub
+Private Sub ComboBox_MA_KH_KeyDown(ByVal KeyCode As MSForms.ReturnInteger, ByVal Shift As Integer)
+    Comb_Arrow = (KeyCode = vbKeyUp) Or (KeyCode = vbKeyDown)
+    If KeyCode = vbKeyReturn Then
+'        Me.ComboBox_MA_KH.List = SH_RANGE_MA_KH.range("A2", SH_RANGE_MA_KH.Cells(Rows.count, "B").End(xlUp)).Value
+    End If
+End Sub
+'Private Sub ComboBox_MA_KH_Click()
+''    On Error Resume Next
+'    ComboBox_TEN_KH.Value = ComboBox_MA_KH.Column(1)
+'    TextBox_MST.Value = ComboBox_MA_KH.Column(3)
+'    TextBox_DIA_CHI.Value = ComboBox_MA_KH.Column(4)
+'End Sub
+Private Sub ComboBox_MA_KH_Click()
+'    On Error Resume Next
+    ComboBox_TEN_KH.Value = ComboBox_MA_KH.Column(1)
+    TextBox_MST.Value = ComboBox_MA_KH.Column(3)
+    TextBox_DIA_CHI.Value = ComboBox_MA_KH.Column(4)
+End Sub
+'====================================================================================================================================================
+'====================================...ComboBox Ten Khach Hang AutoComplete
+'====================================================================================================================================================
+Private Sub ComboBox_TEN_KH_Change()
+    Dim I, LRow As Long
+    LRow = Worksheets("MA_KHACH_HANG").Cells(Rows.count, 2).End(xlUp).row
+    If LRow > 1 Then
+        If Not Comb_Arrow Then
+        With Me.ComboBox_TEN_KH
+           .List = Worksheets("MA_KHACH_HANG").range("B2", Worksheets("MA_KHACH_HANG").Cells(Rows.count, "E").End(xlUp)).Value
+           .RemoveItem 0
+           .ListRows = Application.WorksheetFunction.Min(15, .ListCount)
+           '.DropDown
+            If Len(.Text) Then
+                 For I = .ListCount - 1 To 0 Step -1
+                    If InStr(1, .List(I), .Text, vbTextCompare) = 0 Then .RemoveItem I
+                 Next
+            ' .DropDown
+             End If
+         End With
+         End If
+    End If
+End Sub
+Private Sub ComboBox_TEN_KH_KeyDown(ByVal KeyCode As MSForms.ReturnInteger, ByVal Shift As Integer)
+    Comb_Arrow = (KeyCode = vbKeyUp) Or (KeyCode = vbKeyDown)
+    If KeyCode = vbKeyReturn Then Me.ComboBox_TEN_KH.List = Worksheets("MA_KHACH_HANG").range _
+    ("B2", Worksheets("MA_KHACH_HANG").Cells(Rows.count, "E").End(xlUp)).Value
+End Sub
+Private Sub ComboBox_TEN_KH_Click()
+'    On Error Resume Next
+    ComboBox_MA_KH.Value = ComboBox_TEN_KH.Column(1)
+    TextBox_MST.Value = ComboBox_TEN_KH.Column(2)
+    TextBox_DIA_CHI.Value = ComboBox_TEN_KH.Column(3)
+End Sub
