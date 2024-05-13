@@ -1,0 +1,14 @@
+login 01
+id: 	tbdad1
+pass:	123
+năm:	2023
+
+login 02
+id: 	admin
+pass:	123123
+năm:	
+Nếu bấm LOGIN >> Show Dashboard
+Nếu bấm cancel >> Show UF Check connection
+
+
+pass mở code: Ta#9999
