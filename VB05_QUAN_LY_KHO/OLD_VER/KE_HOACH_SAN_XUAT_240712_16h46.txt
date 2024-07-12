@@ -1,0 +1,10 @@
+KE_HOACH_SAN_XUAT_240628_09h45.xlsm
+Hoàn thành xong phiếu nhập kho thành phẩm
+
+KE_HOACH_SAN_XUAT_240708_16h54.xlsm
+Hoàn thành xong các phiếu thành phẩm, chuyển sang phiếu chi tiết
+
+KE_HOACH_SAN_XUAT_240712_16h46.xlsm
+Hoàn thành xong:
++ Quản lý kho thành phẩm
++ Quản lý kho chi tiết
