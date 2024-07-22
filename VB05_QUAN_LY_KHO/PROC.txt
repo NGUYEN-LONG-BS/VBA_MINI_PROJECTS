@@ -1,0 +1,4 @@
+[Proc_TB_DON_DAT_HANG_THANH_VIEN_INSERT_INTO_TEMP_TABLE] N'1', N'', N'', N'', N'', N'', N'', N'HH-03A-001', N'FCO 100 A - 24 kV - 125 kV BIL, s? (không bass)', N'500', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'', N'TBVT1', N'2024-07-22 16:40:27',''
+
+[Proc_TB_AUXILIARY_MATERIAL_STOCK_RETURNED_INSERT_INTO_TEMP_TABLE] N'HNLP-0001', N'2024-07-22', N'', N'BH003', N'Cty Thi?t B? Ði?n Tu?n Ân', N'1', N's', N's', N's', N'100', N'100', N'10000', N'', N'TBVT1', N'2024-07-22 16:58:42',''
+
