@@ -8,3 +8,7 @@ KE_HOACH_SAN_XUAT_240712_16h46.xlsm
 Hoàn thành xong:
 + Quản lý kho thành phẩm
 + Quản lý kho chi tiết
+
+KE_HOACH_SAN_XUAT_240724_09h48.xlsm
+Hoàn thành xong:
++ Quản lý đơn hàng chưa xử lý
