@@ -12,3 +12,7 @@ Hoàn thành xong:
 KE_HOACH_SAN_XUAT_240724_09h48.xlsm
 Hoàn thành xong:
 + Quản lý đơn hàng chưa xử lý
+
+KE_HOACH_SAN_XUAT_240817_09h07.xlsm
+Hoàn thành xong:
++ đang làm: DDH đang đề nghị sản xuất
